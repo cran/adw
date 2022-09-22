@@ -2,41 +2,54 @@
 % Please edit documentation in R/adw.R
 \name{adw}
 \alias{adw}
-\title{Angular Distance Weighting}
+\title{Angular Distance Weighting Interpolation.}
 \usage{
 adw(
-  dd,
-  xmin = NULL,
-  xmax = NULL,
-  ymin = NULL,
-  ymax = NULL,
-  gridSize = 1,
+  ds,
+  extent = NULL,
+  gridsize = 1,
   cdd = 1e+06,
-  m = 4
+  m = 4,
+  nmin = 3,
+  nmax = 10,
+  maskON = TRUE
 )
 }
 \arguments{
-\item{dd}{a input dataframe which contains column names of lon, lat, value}
+\item{ds}{a input dataframe which contains the column names of lon, lat, value}
 
-\item{xmin}{the minimum longitude of the rectangular mesh}
+\item{extent}{a extent numeric vector of length 4 in the order c(xmin, xmax, ymin, ymax);
+or a SpatVector polygons object, assume that the coordinate reference system
+is WGS1984 (EPSG: 4326); if extent is a NULL value (i.e. no extent is inputted),
+the extent vector will be calculated from the input data.}
 
-\item{xmax}{the maximum longitude of the rectangular mesh}
+\item{gridsize}{the grid size (resolution). units: degree.}
 
-\item{ymin}{the minimum latitude of the rectangular mesh}
+\item{cdd}{correlation decay distance, i.e. the maximum search radius.
+unit: meter. default value: 1e6.}
 
-\item{ymax}{the maximum latitude of the rectangular mesh}
+\item{m}{is used to adjust the weighting function further, higher values of m
+increase the rate at which the weight decays with distance. default value 4.}
 
-\item{gridSize}{the grid resolution}
+\item{nmin}{the minimum number of observation points required to interpolate
+a grid within the search radius (i.e. cdd); if the number of stations within
+the search ridius (cdd) is less than nmin, a missing value will be generated
+to fill this grid. default value 3.}
 
-\item{cdd}{the correlation decay distance, unit: meter}
+\item{nmax}{The number of nearest points within the search radius to use for
+interpolation. default value 10.}
 
-\item{m}{is used to adjust the weighting function further}
+\item{maskON}{Logical value; whether to mask (remove) grids that are outside
+the SpatVector polygon (extent). default TRUE. Parameter 'maskON' only works
+when the class of parameter 'extent' is 'SpatVector'.}
 }
 \value{
-a regular latitude-longitude grid dataframe
+a regular latitude-longitude dataframe grid (interpoled values).
 }
 \description{
-The irregularly-spaced data are interpolated onto regular latitude-longitude grids by weighting each station according to its distance and angle from the center of a search radius.
+The irregularly-spaced data are interpolated onto regular latitude-longitude
+grids by weighting each station according to its distance and angle from the
+center of a search radius.
 }
 \examples{
 set.seed(2)
@@ -44,7 +57,18 @@ dd <- data.frame(lon = runif(100, min = 110, max = 117),
                  lat = runif(100, min = 31, max = 37),
                  value = runif(100, min = -10, max = 10))
 head(dd)
-dg <- adw(dd, gridSize = 1, cdd = 1e5)
-# dg is the dataframe of grid (mesh)
-head(dg)
+
+# example 1
+grd <- adw(dd, extent = c(110, 117, 31, 37), gridsize = 0.5, cdd = 1e5)
+head(grd)
+
+# example 2
+urlmap <- "https://geo.datav.aliyun.com/areas_v3/bound/410000.json"
+hmap <- terra::vect(urlmap) # return a 'SpatVector' object.
+grd <- adw(dd, extent = hmap, gridsize = 0.5, cdd = 1e5)
+head(grd)
+
+}
+\references{
+Caesar, J., L. Alexander, and R. Vose, 2006: Large-scale changes in observed daily maximum and minimum temperatures: Creation and analysis of a new gridded data set. Journal of Geophysical Research, 111, https://doi.org/10.1029/2005JD006280.
 }
