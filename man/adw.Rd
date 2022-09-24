@@ -16,7 +16,7 @@ adw(
 )
 }
 \arguments{
-\item{ds}{a input dataframe which contains the column names of lon, lat, value}
+\item{ds}{a input dataframe which contains the column names of lon, lat, value.}
 
 \item{extent}{a extent numeric vector of length 4 in the order c(xmin, xmax, ymin, ymax);
 or a SpatVector polygons object, assume that the coordinate reference system

@@ -3,7 +3,7 @@
 #' The irregularly-spaced data are interpolated onto regular latitude-longitude 
 #' grids by weighting each station according to its distance and angle from the 
 #' center of a search radius.
-#' @param ds a input dataframe which contains the column names of lon, lat, value
+#' @param ds a input dataframe which contains the column names of lon, lat, value.
 #' @param extent a extent numeric vector of length 4 in the order c(xmin, xmax, ymin, ymax);
 #' or a SpatVector polygons object, assume that the coordinate reference system 
 #' is WGS1984 (EPSG: 4326); if extent is a NULL value (i.e. no extent is inputted), 

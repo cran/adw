@@ -1,3 +1,8 @@
+# adw 0.2.1
+
+-   fix the BugReports website.
+-   add README file
+
 # adw 0.2.0
 
 -   all of the functions of sf package were replaced by the functions of terra package. The calculation speed will be several times faster than before.
