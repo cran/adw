@@ -1,3 +1,7 @@
+# adw 0.3.0
+-   The adw interpolation function is rewritten, and the parameter 'extent' can be a class of 'sf', 'SpatVector', or 'vector'. The calculation speed will be several times faster than before.
+-   deleter parameter of 'maskON'.
+
 # adw 0.2.1
 
 -   fix the BugReports website.
