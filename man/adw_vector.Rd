@@ -9,10 +9,7 @@ adw_vector(ds, extent, gridsize = 5, cdd = 1000, m = 4, nmin = 3, nmax = 10)
 \arguments{
 \item{ds}{a input dataframe which contains the column names of lon, lat, value.}
 
-\item{extent}{a extent numeric vector of length 4 in the order c(xmin, xmax, ymin, ymax),
-or a polygon object with class 'sf' (package 'sf'),  or a polygon object with
-class 'SpatVector' (package 'terra'). Assume that the coordinate reference
-system is WGS1984 (EPSG: 4326).}
+\item{extent}{a extent numeric vector of length 4 in the order c(xmin, xmax, ymin, ymax).}
 
 \item{gridsize}{the grid size, i.e. the grid resolution. units: degree.}
 

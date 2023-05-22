@@ -1,6 +1,6 @@
 Package: adw
 Title: Angular Distance Weighting Interpolation
-Version: 0.3.0
+Version: 0.3.1
 Authors@R: 
     c(person(given = "Panfeng", 
              family = "Zhang", 
@@ -16,7 +16,7 @@ Authors@R:
       person(given = "Chenchen",
              family = "Ren",
              role = "ctb"),
-      person(given = "Zhengxiang",
+      person(given = "Xiang",
              family = "Zheng",
              role = "ctb"))
 Maintainer: Panfeng Zhang <zhangpanfeng@cug.edu.cn>
@@ -32,11 +32,11 @@ LazyData: true
 Suggests: knitr, rmarkdown, ggplot2
 VignetteBuilder: knitr
 NeedsCompilation: no
-Packaged: 2023-04-09 19:05:10 UTC; zhang
+Packaged: 2023-05-22 16:38:22 UTC; zhang
 Author: Panfeng Zhang [aut, cre] (<https://orcid.org/0000-0001-6084-9231>),
   Guoyu Ren [ctb],
   Yun Qin [ctb],
   Chenchen Ren [ctb],
-  Zhengxiang Zheng [ctb]
+  Xiang Zheng [ctb]
 Repository: CRAN
-Date/Publication: 2023-04-09 19:30:02 UTC
+Date/Publication: 2023-05-22 18:30:08 UTC

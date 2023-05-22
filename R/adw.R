@@ -59,10 +59,7 @@ weightCal <- function(stnDistances, corDecayDistance, m,
 #' grids by weighting each station according to its distance and angle from the 
 #' center of a search radius.
 #' @param ds a input dataframe which contains the column names of lon, lat, value.
-#' @param extent a extent numeric vector of length 4 in the order c(xmin, xmax, ymin, ymax),
-#' or a polygon object with class 'sf' (package 'sf'),  or a polygon object with
-#' class 'SpatVector' (package 'terra'). Assume that the coordinate reference 
-#' system is WGS1984 (EPSG: 4326).
+#' @param extent a extent numeric vector of length 4 in the order c(xmin, xmax, ymin, ymax).
 #' @param gridsize the grid size, i.e. the grid resolution. units: degree.
 #' @param cdd correlation decay distance, i.e. the maximum search radius. 
 #' unit: kilometer. default value: 1000km.
@@ -124,10 +121,8 @@ adw_vector <- function(ds, extent, gridsize = 5, cdd = 1e3, m = 4, nmin = 3,
 #' grids by weighting each station according to its distance and angle from the 
 #' center of a search radius.
 #' @param ds a input dataframe which contains the column names of lon, lat, value.
-#' @param extent a extent numeric vector of length 4 in the order c(xmin, xmax, ymin, ymax),
-#' or a polygon object with class 'sf' (package 'sf'),  or a polygon object with
-#' class 'SpatVector' (package 'terra'). Assume that the coordinate reference 
-#' system is WGS1984 (EPSG: 4326).
+#' @param extent a polygon object with class 'sf' (package 'sf'). Assume that 
+#' the coordinate reference system is WGS1984 (EPSG: 4326).
 #' @param gridsize the grid size, i.e. the grid resolution. units: degree.
 #' @param cdd correlation decay distance, i.e. the maximum search radius. 
 #' unit: kilometer. default value: 1000km.
@@ -197,10 +192,8 @@ adw_sf <- function(ds, extent, gridsize = 5, cdd = 1e3, m = 4, nmin = 3, nmax = 
 #' grids by weighting each station according to its distance and angle from the 
 #' center of a search radius.
 #' @param ds a input dataframe which contains the column names of lon, lat, value.
-#' @param extent a extent numeric vector of length 4 in the order c(xmin, xmax, ymin, ymax),
-#' or a polygon object with class 'sf' (package 'sf'),  or a polygon object with
-#' class 'SpatVector' (package 'terra'). Assume that the coordinate reference 
-#' system is WGS1984 (EPSG: 4326).
+#' @param extent a polygon object with class 'SpatVector' (package 'terra'). 
+#' Assume that the coordinate reference system is WGS1984 (EPSG: 4326).
 #' @param gridsize the grid size, i.e. the grid resolution. units: degree.
 #' @param cdd correlation decay distance, i.e. the maximum search radius. 
 #' unit: kilometer. default value: 1000km.
