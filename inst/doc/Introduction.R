@@ -5,7 +5,7 @@ knitr::opts_chunk$set(
 )
 
 ## ----eval=FALSE---------------------------------------------------------------
-#  install.packages("adw")
+# install.packages("adw")
 
 ## ----message=FALSE------------------------------------------------------------
 library(sf)

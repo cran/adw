@@ -1,11 +1,11 @@
 Package: adw
 Title: Angular Distance Weighting Interpolation
-Version: 0.4.0
+Version: 0.4.1
 Authors@R: 
     c(person(given = "Panfeng", 
              family = "Zhang", 
              role = c("aut", "cre"),
-             email = "zhangpanfeng@jlnu.edu.cn", 
+             email = "zhangpf08@163.com", 
              comment = c(ORCID = "0000-0001-6084-9231")),
       person(given = "Guoyu",
              family = "Ren",
@@ -19,23 +19,24 @@ Authors@R:
       person(given = "Xiang",
              family = "Zheng",
              role = "ctb"))
-Maintainer: Panfeng Zhang <zhangpanfeng@jlnu.edu.cn>
+Maintainer: Panfeng Zhang <zhangpf08@163.com>
 Description: The irregularly-spaced data are interpolated onto regular latitude-longitude grids by weighting each station according to its distance and angle from the center of a search radius. In addition to this, we also provide a simple way (Jones and Hulme, 1996) to grid the irregularly-spaced data points onto regular latitude-longitude grids by averaging all stations in grid-boxes.
 URL: https://github.com/PanfengZhang/adw
 BugReports: https://github.com/PanfengZhang/adw/issues
-Depends: R (>= 4.2.0)
+Depends: R (>= 4.3.0)
 Imports: methods, sf, terra, cnmap
 License: GPL-3
 Encoding: UTF-8
-RoxygenNote: 7.3.1
-Suggests: knitr, rmarkdown, ggplot2
+RoxygenNote: 7.3.3
+Suggests: knitr, rmarkdown, ggplot2, tibble
 VignetteBuilder: knitr
 NeedsCompilation: no
-Packaged: 2024-04-15 16:34:07 UTC; zhang
-Author: Panfeng Zhang [aut, cre] (<https://orcid.org/0000-0001-6084-9231>),
+Packaged: 2025-09-13 02:59:17 UTC; zhang
+Author: Panfeng Zhang [aut, cre] (ORCID:
+    <https://orcid.org/0000-0001-6084-9231>),
   Guoyu Ren [ctb],
   Yun Qin [ctb],
   Chenchen Ren [ctb],
   Xiang Zheng [ctb]
 Repository: CRAN
-Date/Publication: 2024-04-15 19:10:16 UTC
+Date/Publication: 2025-09-13 22:00:09 UTC

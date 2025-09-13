@@ -308,6 +308,8 @@ adw <- function(ds, extent, gridsize = 5, cdd = 1e3, m = 4, nmin = 3, nmax = 10)
     grd <- adw_sf(ds, extent, gridsize, cdd, m, nmin, nmax)
   } else if (methods::is(extent, "SpatVector")) {
     grd <- adw_sv(ds, extent, gridsize, cdd, m, nmin, nmax)
+  } else {
+    print( "The object of extent is neither 'vector' nor 'sf' nor 'SpatVector'")
   }
   return(grd)
 }
@@ -498,6 +500,8 @@ points2grid <- function(dd, extent, gridsize = 0.5) {
     grd <- points2grid_sf(dd, extent, gridsize)
   } else if (methods::is(extent, "SpatVector")) {
     grd <- points2grid_sv(dd, extent, gridsize)
+  } else {
+    print( "The object of extent is neither 'vector' nor 'sf' nor 'SpatVector'")
   }
   return(grd)
 }

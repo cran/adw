@@ -1,12 +1,12 @@
-21543ba1f210a821b158141549e7917d *DESCRIPTION
+367c5b45b34933e3c13f22ba17cec248 *DESCRIPTION
 65162969bac1043f4643df228c783380 *NAMESPACE
-467e22a02191f0e0e137f014fe8223f8 *NEWS.md
-c1fa28587fba9102583dabdf15ef1f9c *R/adw.R
-966168dbcc5a96576c0d708a3a6bb94d *README.md
-8399c155989dc6ce7bd5be3988ae66be *build/vignette.rds
-7b01dbd439a34fcaba342ce353f3070d *inst/doc/Introduction.R
-850050233dafa4268d0bc0ed19f5188c *inst/doc/Introduction.Rmd
-250677c496c8a3abae5c51374c0440db *inst/doc/Introduction.html
+9f4d08e8a6fb147e1807acd929b963cf *NEWS.md
+122bb2570247b2d419c2764aeb7c799b *R/adw.R
+baf3cb949444696bbe954c210622ff08 *README.md
+f774beb052d4f351c32b9f702c8da32e *build/vignette.rds
+e04f583a80379c31be38e34df0dabdb1 *inst/doc/Introduction.R
+687b5cbe9947f705fd4324343dcde822 *inst/doc/Introduction.Rmd
+4f58f3baf5512eb96a37368cb9cd7807 *inst/doc/Introduction.html
 fa86d04d46993c7dac069d94f4f0ff73 *man/adw.Rd
 588828b932840dcd7f3e3df994de8643 *man/adw_sf.Rd
 61e09dd8e0f5abf46bc401c6d8a81119 *man/adw_sv.Rd
@@ -16,4 +16,4 @@ fa86d04d46993c7dac069d94f4f0ff73 *man/adw.Rd
 586f2e18ab02a287df06fb2c9fdcd96d *man/points2grid_sf.Rd
 48fe508bc86a08756232326a8b2d3f8a *man/points2grid_sv.Rd
 347af189335747fd9d0de3c0d638339a *man/points2grid_vector.Rd
-850050233dafa4268d0bc0ed19f5188c *vignettes/Introduction.Rmd
+687b5cbe9947f705fd4324343dcde822 *vignettes/Introduction.Rmd
